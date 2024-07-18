@@ -24,6 +24,106 @@
                 <a href="contacto.html">contacto</a> |
             </nav>
         </div>
+
+        <h3> información Personal</h3>
+        <br />
+
+        <div>
+            <br>
+            <form id="Contacto" ¡name="formulario" method="get" action="procesador.html">
+                <p>
+                    <label for="nombre"> Nombre:
+                        <!--(input)-este elemento crea un campo de emtrada-->
+                        <!--maxlength-este especifica al maximo caracter del campo(limita)-->
+                        <input type="text" name="Nombre" maxlength="50" id="Nombre">
+                    </label>
+                </p>
+
+                <p>
+
+                    <label for="Clave"> Clave:
+                        <!--(input)-este elemento crea un campo de emtrada-->
+                        <!--maxlength-este especifica al maximo caracter del campo(limita)-->
+                        <input type="password" name="Clave" maxlength="15" id="Clave">
+                    </label>
+                </p>
+
+                <!-- 
+                       min- el valor de este atributo dtermina el valor minimo que acepta el campo
+                       max-- El valor de este atibuto determina  el valor maxim que acepta e
+                       l campo-->
+
+
+                <p>
+                    <label>
+                        Edad: <input type="number" min="13" max="100" name="Edad">
+                    </label>
+                </p>
+
+
+                <!-- range-- este valor genera un campo de entrada para insertar un rango de numeros-->
+
+
+                <p>
+                    <label>
+                        Estatura: <input type="range" min="50" max="300" name="statura" value="250">
+                    </label>
+                </p>
+
+                <p>
+                    <label>
+                        Correo: <input type="email" name="correo">
+                    </label>
+                </p>
+
+                <!--tel-- Este valor genera  un campo de emtrada para insertar números de telefono-->
+
+                <p>
+                    <label>
+                        Telefono: <input type="tel" name="telefono" placeholder="506-8263-8750">
+                    </label>
+                </p>
+                <!-- placeholder-- me da un ejemplo de lo que debo poner en su lugar-->
+
+
+
+                <!----->
+
+                <p>
+                    <label>
+                        Sitio Web: <input type="url" name="sitioweb">
+                    </label>
+                </p>
+
+                <div>
+
+                    <h3>
+                        Años de experiencia:
+                    </h3>
+                    <br />
+
+
+                    <p>
+                        <label>Experiencia:
+                            <input type="radio" value="1" name="experiencia" cheked> 1 año
+
+
+                            <input type="radio" value="2" name="experiencia" checked> 2 año
+
+
+                            <input type="radio" value="3" name="experiencia" checked> 3 año
+
+
+                            <input type="radio" value="3" name="experiencia" checked> Más de 3 años
+                        </label>
+                    </p>
+                    </p>
+                </div>
+
+
+            </form>
+        </div>
+
     </main>
     <footer> <!-- etquiteca de pie de pagina-->
         <address> Alajuela, Costa Rica</address> <!-- poner una direccón-->
