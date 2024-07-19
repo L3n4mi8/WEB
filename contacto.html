@@ -100,8 +100,6 @@
                     <h3>
                         Años de experiencia:
                     </h3>
-                    <br />
-
 
                     <p>
                         <label>Experiencia:
@@ -117,8 +115,47 @@
                             <input type="radio" value="3" name="experiencia" checked> Más de 3 años
                         </label>
                     </p>
+
+                    <div>
+                        <h3> Fecha de nacimiento</h3>
+                        <!--- date-- este valor genera un campo de entrada para insertar un fecha-->
+                        <input id="calendario" type="date" name="Fecha">
+                    </div>
+
+                    <div>
+                        <h3>Color </h3>
+
+                        <input type="color" name="micolor" value="#99BB00">
+                    </div>
+
+                    <!-- textarea>-- este elemento crea un campo de entrada para insertar multiples lineas de texto, 
+                 el tamaño se declara con numeros enteros usando atributos rows y cols-->
+
+                    <p>
+                        <label> texto:
+                            <textarea name="texto" cols="50" rows="6"></textarea>
+                        </label>
                     </p>
-                </div>
+
+                    <div>
+                        <!-- select)- este elmento crea una lista de opciones que el usuario puede elegir, junto con option para definit cada opcion-->
+
+                        <select> name="Libro" id="listado">
+                            <label for="listado"> Libros:</label>
+
+                            <option value="1">Elegir Libro</option>
+                            <option value="2">IT</option>
+                            <option value="3">Carrie</option>
+                            <option value="4">El resplandor</option>
+                            <option value="5">Misery</option>
+                           
+                        </select>
+                    </div>
+                    <div>
+                        <!-- submit- este valor genera un boton para enviar el formulario-->
+                         <p><input type="submit" value="Enviar"></p>
+                    </div>
+
 
 
             </form>
@@ -132,3 +169,27 @@
 </body>
 
 </html>
+
+<script>
+
+    var fechaActual = new Date();
+
+
+    var dia = fechaActual.getDate(); // obtengo el dia
+    var mes = fechaActual.getMonth() + 1; // Sumar 1 porque los meses van de 0 a 11
+    var año = fechaActual.getFullYear(); // obtengo el mes
+
+
+    if (mes < 10) {
+        mes = "0" + mes
+    }
+
+    if (dia < 10) {
+        dia = "0" + dia
+    }
+
+
+    var Fechaformateada = año + "-" + mes + "-" + dia
+
+    document.getElementById('calendario').value = Fechaformateada
+</script>
